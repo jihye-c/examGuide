@@ -148,7 +148,7 @@ class Graph{
             }
         }
         this.graphA = {
-            label: '필기 합격률 (%)',
+            label: '1차 합격률 (%)',
             data: this.dataA,
             backgroundColor: this.color.a.gradient,
             datalabels: this.datalabelSet,
@@ -160,7 +160,7 @@ class Graph{
             barPercentage: 0.85 // 막대 간의 간격 조절 (0.8은 막대의 너비가 축의 80%를 차지하도록 함)
         }
         this.graphB = {
-            label: '실기 합격률 (%)',
+            label: '2차 합격률 (%)',
             data: this.dataB,
             backgroundColor: this.color.b.gradient,
             datalabels: this.datalabelSet,
@@ -196,18 +196,12 @@ class Graph{
 }
 
 const chart1 = new Graph('chart1');
-chart1.dataA = [29.7, 28.3, 22.1, 22.3, 22.3];
-chart1.dataB = [40.8, 16.9, 29.3, 39.5, 37.1];
+chart1.dataA = [50.9, 18.6, 48.2, 40.1, 37.9];
+chart1.dataB = [9.9, 2.8, 3.7, 5.7, 1.4];
 chart1.dataTotal = chart1.dataA.concat(chart1.dataB);
 chart1.yMax = Math.round((Math.max(...chart1.dataTotal)+10)/10)*10;
 chart1.draw();
 
-const chart2 = new Graph('chart2');
-chart2.dataA = [18,25,18.4,21.6,18.7];
-chart2.dataB = [34.3,27.4,27.3,24.1,50.6];
-chart2.dataTotal = chart2.dataA.concat(chart2.dataB);
-chart2.yMax = Math.round((Math.max(...chart2.dataTotal)+10)/10)*10;
-chart2.draw();
 
 const graphIo = new IntersectionObserver((entries)=>{
     entries.forEach((entry)=>{
@@ -216,12 +210,12 @@ const graphIo = new IntersectionObserver((entries)=>{
             if (now =='chart1'){
                 chart1.reload();
             }
-            else if(now =='chart2'){
-                chart2.reload();
-            }
         }
     });
 });
 
 let targetGraph = document.querySelectorAll('.sec-passingRate .chart');
 targetGraph.forEach((graph)=> graphIo.observe(graph));
+
+
+
