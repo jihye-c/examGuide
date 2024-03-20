@@ -79,7 +79,7 @@ html #ldMain section .wrap {
   font-weight: 600;
   line-height: 100%;
   border: 2px solid #55c908;
-  padding: 14px 14px;
+  padding: 10px 14px;
   background: rgba(109, 255, 121, 0.15);
   border-radius: 4px;
   transition: all 0.4s ease-out;
@@ -117,6 +117,9 @@ html #ldMain section .wrap {
   color: #232323;
   font-weight: 400;
   line-height: 140%;
+}
+#ldMain i.hr {
+  margin: 32px 0;
 }
 #ldMain .sec-intro {
   background: #e5ffe8;
@@ -180,7 +183,7 @@ html #ldMain section .wrap {
   float: right;
 }
 #ldMain .sec-qualified .contents-box > a.qBtn {
-  margin-top: -56px;
+  margin-top: -42px;
   letter-spacing: -0.2px;
 }
 #ldMain .sec-qualified h4 span {
@@ -275,8 +278,9 @@ html #ldMain section .wrap {
   justify-content: space-evenly;
 }
 #ldMain .sec-anchor .btn-box a {
-  width: 380px;
+  width: 420px;
   text-align: center;
+  line-height: 32px;
   background: #55c908;
   color: #ffffff;
   font-size: 28px;

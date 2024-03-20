@@ -1,7 +1,7 @@
 class Graph{
-    constructor(canvasName,labels){
+    constructor(canvasName,years = ['2019', '2020', '2021', '2022', '2023']){
         this.ctx = document.getElementById(canvasName).getContext('2d');
-        this.labels = labels;
+        this.labels = years;
         this.dataA = []; //필기
         this.dataB = []; //실기
         this.dataTotal = [];
@@ -195,19 +195,17 @@ class Graph{
     }
 }
 
-const chart1 = new Graph('chart1',['2019', '2020', '2021', '2022', '2023']);
+const chart1 = new Graph('chart1');
 chart1.dataA = [29.7, 28.3, 22.1, 22.3, 22.3];
 chart1.dataB = [40.8, 16.9, 29.3, 39.5, 37.1];
 chart1.dataTotal = chart1.dataA.concat(chart1.dataB);
-// console.log(`chart1.dataTotal : ${chart1.dataTotal}`)
 chart1.yMax = Math.floor(Math.max(...chart1.dataTotal)+10);
 chart1.draw();
 
-const chart2 = new Graph('chart2', ['2019','2020','2021','2022','2023']);
+const chart2 = new Graph('chart2');
 chart2.dataA = [18,25,18.4,21.6,18.7];
 chart2.dataB = [34.3,27.4,27.3,24.1,50.6];
 chart2.dataTotal = chart2.dataA.concat(chart2.dataB);
-// console.log(chart2.dataTotal);
 chart2.yMax = Math.round((Math.max(...chart2.dataTotal)+10)/10)*10;
 chart2.draw();
 

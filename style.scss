@@ -45,7 +45,7 @@ html{ //default set
     a.qBtn{
         display: inline-block;
         @include txt(18px, $cl-main, 600, 100%); border: 2px solid $cl-main;
-        padding:14px 14px; background: $cl-main-op; border-radius: 4px;
+        padding:10px 14px; background: $cl-main-op; border-radius: 4px;
         transition: all .4s ease-out;
         &:hover{color: $cl-wh; background: $cl-main;}
     }
@@ -62,6 +62,7 @@ html{ //default set
             td{padding: 4px 8px; @include txt(16px, $cl-bk, 400);}
         }
     }
+    i.hr{margin: 32px 0;}
     .sec-intro{
         background: $cl-bg;
         &::before{
@@ -94,7 +95,7 @@ html{ //default set
     }
     .sec-qualified{
         a.qBtn{float: right;}
-        .contents-box > a.qBtn{margin-top: -56px; letter-spacing: -0.2px;}
+        .contents-box > a.qBtn{margin-top: -42px; letter-spacing: -0.2px;}
         h4 span{font-weight: 400;}
         p{
             @include txt(16px, $cl-bk, 400);
@@ -143,13 +144,13 @@ html{ //default set
         .btn-box{
             display: flex; justify-content: space-evenly;
             a{
-                width: 380px; text-align: center;
+                width: 420px; text-align: center; line-height: 32px;
                 background: $cl-main; color: $cl-wh; font-size: 28px;
             }
         }
     }
     .sec-last{
-        background: $cl-sub; height: 96px;display: flex;
+        background: $cl-sub; height: 96px; display: flex;
         justify-content: center; align-items: center;
         img{height: 40px;}
     }
