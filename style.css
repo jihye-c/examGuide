@@ -1,0 +1,293 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import url("https://www.moa-ba.com/webheads/css/shadow.css");
+html {
+  scroll-behavior: smooth;
+}
+html #ldMain * {
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  font-family: "Pretendard", "NotoSansKR";
+  word-break: keep-all;
+}
+html .middle {
+  padding: 60px 0;
+}
+html #ldMain section {
+  position: relative;
+  background: no-repeat;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+}
+html #ldMain section .con {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  padding: 48px 0;
+}
+html #ldMain section .last .con {
+  padding: 40px 0;
+}
+html #ldMain section .last svg path {
+  fill: #011617;
+}
+html #ldMain section .wrap {
+  width: 100%;
+  position: relative;
+}
+
+#ldMain h1 {
+  font-size: 80px;
+  color: #55c908;
+  font-weight: 900;
+  line-height: 120%;
+  margin: 72px 0;
+}
+#ldMain h2 {
+  font-size: 40px;
+  color: #55c908;
+  font-weight: 800;
+  line-height: 140%;
+  margin-bottom: 32px;
+}
+#ldMain h3 {
+  font-size: 32px;
+  color: #55c908;
+  font-weight: 800;
+  line-height: 140%;
+}
+#ldMain h4 {
+  font-size: 24px;
+  color: #232323;
+  font-weight: 700;
+  line-height: 180%;
+}
+#ldMain ol, #ldMain ol li {
+  list-style: decimal;
+}
+#ldMain ol li {
+  margin-left: 28px;
+}
+#ldMain a.qBtn {
+  display: inline-block;
+  font-size: 18px;
+  color: #55c908;
+  font-weight: 600;
+  line-height: 100%;
+  border: 2px solid #55c908;
+  padding: 14px 14px;
+  background: rgba(109, 255, 121, 0.15);
+  border-radius: 4px;
+  transition: all 0.4s ease-out;
+}
+#ldMain a.qBtn:hover {
+  color: #ffffff;
+  background: #55c908;
+}
+#ldMain table {
+  border: 2px solid #55c908;
+  text-align: center;
+  border-collapse: collapse;
+}
+#ldMain table th {
+  padding: 4px 8px;
+  border: #ffffff 1px solid;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 140%;
+  background: #55c908;
+}
+#ldMain table tbody th {
+  background: rgba(109, 255, 121, 0.15);
+  font-size: 16px;
+  color: #232323;
+  font-weight: 600;
+  line-height: 140%;
+  padding: 8px;
+  border: #55c908 1px solid;
+}
+#ldMain table tbody td {
+  padding: 4px 8px;
+  font-size: 16px;
+  color: #232323;
+  font-weight: 400;
+  line-height: 140%;
+}
+#ldMain .sec-intro {
+  background: #e5ffe8;
+}
+#ldMain .sec-intro::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 100% 95% no-repeat;
+  background-size: 620px;
+  background-image: url("https://www.moa-ba.com/gnu/data/cheditor/examGuide/elec.png");
+  animation: float 2.4s alternate infinite ease-in-out;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+#ldMain .sec-intro h2 {
+  font-size: 28px;
+  color: #e5ffe8;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: center;
+  background: #55c908;
+}
+#ldMain .sec-intro .ex {
+  margin: 24px 0;
+  width: 800px;
+}
+#ldMain .sec-intro .ex p {
+  font-size: 18px;
+  color: #232323;
+  font-weight: 400;
+  line-height: 140%;
+}
+#ldMain .sec-schedule {
+  background: #ffffff;
+}
+#ldMain .sec-schedule table {
+  margin-bottom: 20px;
+}
+#ldMain .sec-schedule ol {
+  padding: 24px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+#ldMain .sec-schedule ol li {
+  font-size: 16px;
+  color: #232323;
+  font-weight: 400;
+  line-height: 140%;
+}
+#ldMain .sec-qualified a.qBtn {
+  float: right;
+}
+#ldMain .sec-qualified .contents-box > a.qBtn {
+  margin-top: -56px;
+  letter-spacing: -0.2px;
+}
+#ldMain .sec-qualified h4 span {
+  font-weight: 400;
+}
+#ldMain .sec-qualified p {
+  font-size: 16px;
+  color: #232323;
+  font-weight: 400;
+  line-height: 140%;
+}
+#ldMain .sec-qualified p a {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #55c908;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 140%;
+  float: right;
+}
+#ldMain .sec-qualified .double {
+  display: flex;
+  justify-content: space-between;
+}
+#ldMain .sec-qualified .double .content {
+  width: 582px;
+}
+#ldMain .sec-qualified .content {
+  border: 2px solid #55c908;
+  margin: 12px 0;
+}
+#ldMain .sec-qualified .content h5 {
+  background: #55c908;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 160%;
+  text-align: center;
+}
+#ldMain .sec-qualified .content li {
+  padding: 8px 16px;
+  border-bottom: 0.5px solid rgba(109, 255, 121, 0.15);
+  font-size: 16px;
+  color: #232323;
+  font-weight: 400;
+  line-height: 140%;
+}
+#ldMain .sec-qualified .content li:nth-child(even) {
+  background: rgba(109, 255, 121, 0.15);
+}
+#ldMain .sec-subjects ul li:first-child {
+  margin-bottom: 32px;
+}
+#ldMain .sec-subjects h4 span {
+  font-size: 16px;
+  color: #55c908;
+  font-weight: 600;
+  line-height: 140%;
+  margin-left: 12px;
+}
+#ldMain .sec-passingRate .box {
+  position: relative;
+  padding-bottom: 60px;
+}
+#ldMain .sec-passingRate .box:last-child {
+  padding-bottom: 0;
+}
+#ldMain .sec-passingRate .box p.table-title {
+  text-align: center;
+  padding: 0 0 12px 0;
+  font-size: 28px;
+  color: #55c908;
+  font-weight: 800;
+  line-height: 140%;
+}
+#ldMain .sec-passingRate .box table {
+  margin-top: 24px;
+}
+#ldMain .sec-passingRate i {
+  display: block;
+  background: rgba(109, 255, 121, 0.15);
+  width: 100%;
+  height: 1px;
+}
+#ldMain .sec-anchor {
+  background: rgba(109, 255, 121, 0.15);
+}
+#ldMain .sec-anchor .btn-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+#ldMain .sec-anchor .btn-box a {
+  width: 380px;
+  text-align: center;
+  background: #55c908;
+  color: #ffffff;
+  font-size: 28px;
+}
+#ldMain .sec-last {
+  background: #06771e;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ldMain .sec-last img {
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */

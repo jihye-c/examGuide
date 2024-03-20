@@ -1,0 +1,156 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://www.moa-ba.com/webheads/css/shadow.css');
+
+$cl-bk : #232323;
+$cl-wh : #ffffff;
+$cl-gr : #f5f5f5;
+$cl-main : #55c908;
+$cl-main-op : rgba(109, 255, 121, 0.15);
+$cl-sub : #06771e;;
+$cl-bg : #e5ffe8;
+
+@mixin txt($fontSize, $fontColor, $fontWeight, $lineHeight:140%){
+    font-size: $fontSize; color: $fontColor;
+    font-weight: $fontWeight; line-height: $lineHeight;
+}
+
+
+html{ //default set
+    scroll-behavior: smooth;
+    #ldMain * {
+        -webkit-font-smoothing: antialiased; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-user-drag: none;
+        font-family: 'Pretendard', 'NotoSansKR';
+        word-break: keep-all;
+    }
+    .middle{padding: 60px 0;}
+    #ldMain section {
+        position: relative; background: no-repeat; overflow: hidden;
+        box-sizing: border-box;
+        width: 100%; display: block;
+        .con{width: 1180px; margin: 0 auto; position: relative; padding:48px 0;}
+        .last {
+            .con{padding: 40px 0;}
+            svg path{fill: #011617;}
+        }
+        .wrap{width:100%; position: relative;}
+    }
+}
+#ldMain{
+    h1{@include txt(80px, $cl-main,900,120%); margin: 72px 0;}
+    h2{@include txt(40px, $cl-main, 800); margin-bottom: 32px;}
+    h3{@include txt(32px, $cl-main, 800);}
+    h4{@include txt(24px, $cl-bk, 700, 180%);}
+    ol, ol li{list-style: decimal;}
+    ol li{margin-left: 28px;}
+    a.qBtn{
+        display: inline-block;
+        @include txt(18px, $cl-main, 600, 100%); border: 2px solid $cl-main;
+        padding:14px 14px; background: $cl-main-op; border-radius: 4px;
+        transition: all .4s ease-out;
+        &:hover{color: $cl-wh; background: $cl-main;}
+    }
+    table{
+        border: 2px solid  $cl-main;
+        text-align: center;
+        border-collapse: collapse;
+        th{
+            padding: 4px 8px; border: $cl-wh 1px solid;
+            @include txt(18px,$cl-wh,700); background: $cl-main; 
+        }
+        tbody{
+            th{background: $cl-main-op; @include txt(16px, $cl-bk, 600); padding: 8px; border: $cl-main 1px solid;}
+            td{padding: 4px 8px; @include txt(16px, $cl-bk, 400);}
+        }
+    }
+    .sec-intro{
+        background: $cl-bg;
+        &::before{
+            content: " ";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: 100% 95% no-repeat; background-size: 620px;
+            background-image: url('https://www.moa-ba.com/gnu/data/cheditor/examGuide/elec.png');
+            animation: float 2.4s alternate infinite ease-in-out;
+            @keyframes float {
+                0% {transform: translateY(0px);}
+                100%{transform: translateY(5px);}
+            }
+        }
+        h2{@include txt(28px, $cl-bg, 600); text-align: center; background: $cl-main;}
+        .ex{
+            margin: 24px 0; width: 800px;
+            p{@include txt(18px, $cl-bk, 400);}
+        }
+    }
+    .sec-schedule{
+        background: $cl-wh;
+        table{margin-bottom: 20px;}
+        ol{
+            padding: 24px; background: $cl-gr;
+            border-radius: 8px;
+            li{@include txt(16px,$cl-bk,400);}
+        }
+    }
+    .sec-qualified{
+        a.qBtn{float: right;}
+        .contents-box > a.qBtn{margin-top: -56px; letter-spacing: -0.2px;}
+        h4 span{font-weight: 400;}
+        p{
+            @include txt(16px, $cl-bk, 400);
+            a{
+                display: inline-block;padding: 4px 8px; border-radius: 4px;
+                background: $cl-main; @include txt(16px, $cl-wh, 600);
+                float: right;
+            }
+        }
+        .double{
+            display: flex; justify-content: space-between;
+            .content{width: 582px;}
+        }
+        .content{
+            border: 2px solid $cl-main; margin: 12px 0;
+            h5{background: $cl-main; @include txt(24px, $cl-wh, 600, 160%); text-align:center;}
+            li{
+                padding: 8px 16px;  border-bottom: 0.5px solid $cl-main-op;
+                @include txt(16px, $cl-bk, 400);
+                &:nth-child(even){background: $cl-main-op;}
+            }
+        }
+    }
+    .sec-subjects{
+        ul li:first-child{margin-bottom: 32px;}
+        h4 span {@include txt(16px, $cl-main, 600); margin-left: 12px;}
+    }
+    .sec-passingRate{
+        .box{
+            position: relative;
+            padding-bottom: 60px;
+            &:last-child{padding-bottom: 0;}
+            p.table-title{
+                text-align: center; padding:0 0 12px 0;
+                @include txt(28px, $cl-main, 800);
+            }
+            table{margin-top: 24px;}
+        }
+        i{
+            display: block; background: $cl-main-op;
+            width: 100%; height: 1px;
+        }
+    }
+    .sec-anchor{
+        background: $cl-main-op;
+        .btn-box{
+            display: flex; justify-content: space-evenly;
+            a{
+                width: 380px; text-align: center;
+                background: $cl-main; color: $cl-wh; font-size: 28px;
+            }
+        }
+    }
+    .sec-last{
+        background: $cl-sub; height: 96px;display: flex;
+        justify-content: center; align-items: center;
+        img{height: 40px;}
+    }
+}
