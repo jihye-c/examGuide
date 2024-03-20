@@ -199,7 +199,7 @@ const chart1 = new Graph('chart1');
 chart1.dataA = [29.7, 28.3, 22.1, 22.3, 22.3];
 chart1.dataB = [40.8, 16.9, 29.3, 39.5, 37.1];
 chart1.dataTotal = chart1.dataA.concat(chart1.dataB);
-chart1.yMax = Math.floor(Math.max(...chart1.dataTotal)+10);
+chart1.yMax = Math.round((Math.max(...chart1.dataTotal)+10)/10)*10;
 chart1.draw();
 
 const chart2 = new Graph('chart2');
